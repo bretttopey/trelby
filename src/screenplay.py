@@ -58,6 +58,12 @@ class Screenplay:
 
         self.cfgGl = cfgGl
         self.cfg = config.Config()
+        
+        #Load custom screenplay settings file if user has selected one.
+        if util.fileExists(self.cfgGl.sconfFilePath):
+            s = util.loadFile(self.cfgGl.sconfFilePath, None)
+            if s:
+                self.cfg.load(s)
 
         # cursor position: line and column
         self.line = 0

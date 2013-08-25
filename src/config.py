@@ -1001,6 +1001,9 @@ class ConfigGlobal:
         # whether to use per-elem-type colors (textSceneColor etc.)
         # instead of using textColor for all elem types
         v.addBool("useCustomElemColors", False, "UseCustomElemColors")
+        
+        # location of default screenplay settings file
+        v.addStrUnicode("sconfFilePath", u"", "SconfFilePath")
 
         # page break indicators to show
         v.addInt("pbi", PBI_REAL, "PageBreakIndicators", PBI_FIRST,
